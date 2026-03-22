@@ -5,17 +5,18 @@ Sistem de baze de date relationale dezvoltat in **Oracle SQL** pentru administra
 ### Schema Bazei de Date (Diagrama E-R)
 ![Schema Bazei de Date](schema_bazei_de_date.png)
 
-
 ---
 
 ### Functionalitati Cheie
-- **Arhitectura:** 8 tabele normalizate cu constrangeri de integritate (PK, FK, Check).
-- **Logica Business:** - Calcul automat varsta si categorisire (Copii, Juniori, Adulti, Seniori).
-  - Gestionare medalii (Aur, Argint, Bronz) via `DECODE`.
-  - Validare date si constrangeri de domeniu.
-- **Obiecte SQL:** View-uri, Indeusi de performanta, Secvente si Sinonime.
+- **Arhitectura Relationala:** 8 tabele normalizate cu constrangeri de integritate (PK, FK, Check).
+- **Logica de Business:**
+  - Calcul automat varsta si categorisire pe grupe (Copii, Juniori, Adulti, Seniori).
+  - Gestionare clasamente si medalii folosind functia `DECODE`.
+  - Manipulare date complexe cu functii de tip `NVL2`, `MONTHS_BETWEEN` si `TRUNC`.
+- **Obiecte SQL Implementate:** View-uri pentru filtrare, Indecsi pentru performanta, Secvente si Sinonime.
 
-### Structura Fisiere
-- `01_Structura.sql` - Creare tabele si constrangeri.
-- `02_Date.sql` - Populare cu date de test.
-- `03_Rapoarte.sql` - Interogari complexe si analiza date.
+### Structura Repository (Fisiere SQL)
+1. **01_Creare_Structura.sql** - Definirea tabelelor si a constrangerilor.
+2. **02_Populare_Date.sql** - Scripturi pentru inserarea datelor de test.
+3. **03_Interogari_si_Rapoarte.sql** - Select-uri complexe, join-uri si analize de date.
+4. **04_Obiecte_Avansate.sql** - Implementare View-uri, Indecsi si Secvente.
