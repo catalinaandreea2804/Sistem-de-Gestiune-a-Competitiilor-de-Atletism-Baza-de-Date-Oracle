@@ -4,7 +4,7 @@ Sistem de baze de date relationale dezvoltat in **Oracle SQL** pentru administra
 
 ### Schema Bazei de Date (Diagrama E-R)
 ![Schema Bazei de Date](schema_bazei_de_date.png)
-*(Asigura-te ca numele pozei urcate pe GitHub este identic cu cel de mai sus)*
+
 
 ---
 
